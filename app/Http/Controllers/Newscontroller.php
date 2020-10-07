@@ -14,8 +14,8 @@ class Newscontroller extends Controller
      */
     public function index()
     {
-        $news_list = DB::table('news')->orderBy('id','desc')->get();
-        return view('admin/new', compact("news_list"));
+        $news_list = all();
+        return view('admin.new.index');
         // $
         // return view('/admin/new',compact());
     }
@@ -27,7 +27,7 @@ class Newscontroller extends Controller
      */
     public function create()
     {
-
+        return view('admin.new.create');
     }
 
     /**
