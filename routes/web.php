@@ -26,12 +26,12 @@ Route::get('/admin', 'HomeController@index')->name('home');
 
 Route::prefix('admin')->middleware(['auth'])->group(function(){
 
-    Route::get('new','NewsController@index')->name('news_index');
+    Route::get('new','NewsController@index')->name('new_index');
     Route::get('new/create','NewsController@create');
     Route::post('new/store','NewsController@store');
     Route::get('new/edit/{new_id}','NewsController@edit');
     Route::post('new/update/{new_id}','NewsController@update');
-    Route::get('new/destory/{new_id}','NewsController@destory');
+    Route::get('new/destroy/{new_id}','NewsController@destroy');
 
 });
 
