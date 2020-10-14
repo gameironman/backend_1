@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\place;
+use App\products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -31,16 +32,10 @@ class x extends Controller
         return view('front/contact_us');
 
     }
-    public function BikiniBottom(){
-        $BikiniBottoms=DB::table('BikiniBottom')->get();
 
-        return view('front/BikiniBottom',compact('BikiniBottoms'));
-
-    }
-    public function BikiniBottom_info($BikiniBottom_id){
-        $BikiniBottom=DB::table('BikiniBottom')->where('id',$BikiniBottom_id)->first();
-
-        return view('front/BikiniBottom_info',compact('BikiniBottom'));
+    public function product(){
+        $products = products::all();
+        return view('front/product',compact('products'));
 
     }
 

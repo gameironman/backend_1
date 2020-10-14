@@ -35,6 +35,10 @@
                         <li class="nav-item">
                         <a class="nav-link" href="{{route('new_index')}}">最新消息</a>
 
+                        </li class="nav-item">
+                        <li>
+                         <a class="nav-link" href="/admin/product_db">商品管理</a>
+
                         </li>
                     </ul>
 
